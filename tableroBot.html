@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //TABLERO DEL BOT 
+        var tablero=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+        var tamanioTablero = tablero.length-1;
+        console.log(tablero);
+
+        for(let i =0 ; i < 5 ; i++){
+            let num = numeroAleatorio(1,tamanioTablero);
+            if(tablero[num]==1){
+                 i--
+            }else if(tablero[num]==0){   
+                 tablero[num]=1;
+                var newTableroBot = tablero;
+            }
+
+        }
+        console.log(newtablero);
+       
+
+
+        //numero random
+        function numeroAleatorio(x,y){
+            return Math.floor(Math.random()*(y-x+1)+x);
+
+        }
+
+        
+        
+        
+                // //acomodar barcos 
+                // for(let i =0; i <5;i++ ){
+                //     var lugarBarco = prompt("ingresa la posicion");
+                //     if(tablero[lugarBarco]==1){
+                //         alert("casilla ocupada");
+                //         i--
+                //     }else if(tablero[lugarBarco]==0){   
+                //     tablero[lugarBarco]=1;
+                //     var newtablero = tablero;
+                //      }
+        
+                // }
+                // console.log(newtablero);
+        
+        </script>  
+    
+</body>
+</html>

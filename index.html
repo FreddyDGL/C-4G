@@ -9,20 +9,26 @@
 <body>
     <script src="Juego.js"></script>
     <script>
-        
+        let nombre;
+        let dimensionTablero;
         alert("---Batalla Naval---");
         alert("RECUERDA QUE EL TABLERO TIENE QUE SER DE UNA DIMENSION MAYOR O IGUAL A 5");
         alert("SIMBOLOGIA \n 0 = Agua(Vacio) \n 1 = Barco \n 2 = Ya Tiraste en esta Casilla \n 3 = Barco hundido");
-        let nombre = prompt("Ingresa tu Nombre de Jugador");
-        alert("Bienvenido(a) a Batalla Naval "+ nombre);
-        let dimensionTablero = prompt("¿Que dimension tendra tu tablero?");
-
-
-
+        nombre = prompt("Ingresa tu Nombre de Jugador");
+        alert("Bienvenido(a) a Batalla Naval "+ nombre + " :)");
+        do {
+            dimensionTablero = prompt("¿Que dimension tendra tu tablero?");
+            if (dimensionTablero >= 5) {
+                alert("tu tablero se a creado con exito");
+            } else {
+                alert("tu tablero no se puede crear es menor a 4");
+            }
+        } while(dimensionTablero < 5);
+        
 
         //instancia para traer las clases 
         let juego = new Juego(dimensionTablero,nombre);
-        juego.verificarTamano();
+        juego.ingresarBarco();
 
     </script>
 </body>
