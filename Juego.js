@@ -27,14 +27,21 @@ class Juego{
         //acomodar barcos
         //llamar el tablero desde el constructor
         let tablero = this.tablero;
+        let resultado = this.dimensionTablero -1;
         for(let i =0; i <5;i++ ){
-            let lugarBarco = prompt("Ingresa tu Barco al tablero de 0 x " + this.dimensionTablero);
-            if(tablero[lugarBarco]==1){
-                alert("Esta casilla se encuentra ocupada");
+            let lugarBarco = prompt("Ingresa tu Barco al tablero contando el numero 0 hasta el numero " + resultado);
+            if (this.dimensionTablero > lugarBarco ) {
+                if(tablero[lugarBarco]==1){
+                    alert("Esta casilla se encuentra ocupada");
+                    i--
+                }else if(tablero[lugarBarco]==0){  
+                tablero[lugarBarco]=1;
+                }
+            } else {
+                alert("no puedes insertar");
                 i--
-            }else if(tablero[lugarBarco]==0){  
-            tablero[lugarBarco]=1;
             }
+
         }
         console.log(tablero);
     }  
