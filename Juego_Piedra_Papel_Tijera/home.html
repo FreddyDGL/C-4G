@@ -57,6 +57,10 @@
         setTimeout(function(){
             ganador();
         }, 100);
+
+        setTimeout(function(){
+            resetearImagenes();
+        }, 1250);
     });
 
 
@@ -67,15 +71,15 @@
         if (numero == 0) {
             jugador2 = piedra;
             document.getElementById('imagenBot').src = "imagenes/piedra.png";
-            alert("El bot eligio piedra");
+            alert("C# eligio piedra");
         } else if (numero == 1) {
             jugador2 = papel;
             document.getElementById('imagenBot').src = "imagenes/papel.png";
-            alert("El bot eligio papel");
+            alert("C# eligio papel");
         } else if (numero == 2) {
             jugador2 = tijera;
             document.getElementById('imagenBot').src = "imagenes/tijeras.png";
-            alert("El bot eligio tijeras");
+            alert("C# eligio tijeras");
         }
     }
 
@@ -99,7 +103,10 @@
         }
     }
 
-
+    function resetearImagenes (){
+        document.getElementById('imagen').src = "imagenes/reposo.png";
+        document.getElementById('imagenBot').src = "imagenes/reposo.png";
+    }
 
 
 </script>
